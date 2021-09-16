@@ -75,11 +75,6 @@ class firewalld (
     path => '/usr/bin:/bin',
   }
 
-  service { 'firewalld':
-    ensure => $service_ensure,
-    enable => $service_enable,
-  }
-
   # create ports
   Firewalld_port {
     zone      => $default_port_zone,
